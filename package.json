@@ -1,6 +1,6 @@
 {
   "name": "test-react-lib-mathieusantiago",
-  "version": "2.1.2",
+  "version": "2.2.2",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -27,6 +27,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^7.0.2"
   },
   "peerDependencies": {

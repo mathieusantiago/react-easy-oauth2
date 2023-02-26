@@ -1,43 +1,24 @@
 import React from "react";
-import {
-  apple,
-  bitbucket,
-  discord,
-  facebook,
-  github,
-  gitlab,
-  google,
-  keycloak,
-  linkedin,
-  microsoft,
-  notion,
-  slack,
-  spotify,
-  twitch,
-  twitter,
-  workos,
-  zoom,
-} from "./icons";
 import "./style.css";
 export const SocialConnect = ({ supabase, provider }) => {
   const icons = {
-    apple,
-    bitbucket,
-    discord,
-    facebook,
-    github,
-    gitlab,
-    google,
-    keycloak,
-    linkedin,
-    microsoft,
-    notion,
-    slack,
-    spotify,
-    twitch,
-    twitter,
-    workos,
-    zoom,
+    apple: 'https://app.supabase.com/img/icons/apple-icon.svg',
+    bitbucket: 'https://app.supabase.com/img/icons/bitbucket-icon.svg',
+    discord: 'https://app.supabase.com/img/icons/discord-icon.svg',
+    facebook: 'https://app.supabase.com/img/icons/facebook-icon.svg',
+    github: 'https://app.supabase.com/img/icons/github-icon.svg',
+    gitlab: 'https://app.supabase.com/img/icons/gitlab-icon.svg',
+    google: 'https://app.supabase.com/img/icons/google-icon.svg',
+    keycloak: 'https://app.supabase.com/img/icons/keycloak-icon.svg',
+    linkedin: 'https://app.supabase.com/img/icons/linkedin-icon.svg',
+    microsoft: 'https://app.supabase.com/img/icons/microsoft-icon.svg',
+    notion: 'https://app.supabase.com/img/icons/notion-icon.svg',
+    slack: 'https://app.supabase.com/img/icons/slack-icon.svg',
+    spotify: 'https://app.supabase.com/img/icons/spotify-icon.svg',
+    twitch: 'https://app.supabase.com/img/icons/twitch-icon.svg',
+    twitter: 'https://app.supabase.com/img/icons/twitter-icon.svg',
+    workos: 'https://app.supabase.com/img/icons/workos-icon.svg',
+    zoom: 'https://app.supabase.com/img/icons/zoom-icon.svg',
   };
   /**
    * Signs up a new user with a third-party authentication provider.
@@ -70,7 +51,7 @@ export const SocialConnect = ({ supabase, provider }) => {
       className="btn-social btn-outline"
       title={provider}
     >
-      <img src={icons[provider]} width="46" />
+      <img src={encodeURI(icons[provider])} alt={provider} width="46" />
     </div>
   );
 };

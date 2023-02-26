@@ -15,7 +15,7 @@ stories.add("FormConnect", () => {
       <FormConnect
         url={process.env.STORYBOOK_URL}
         apiKey={process.env.STORYBOOK_APIKEY}
-        provider={['bitbucket', 'discord', 'facebook', 'github', 'gitlab', 'google', 'keycloak', 'linkedin', 'microsoft', 'notion', 'slack', 'spotify', 'twitch', 'twitter', 'workos', 'zoom']}
+        provider={['apple','bitbucket', 'discord', 'facebook', 'github', 'gitlab', 'google', 'keycloak', 'linkedin', 'microsoft', 'notion', 'slack', 'spotify', 'twitch', 'twitter', 'workos', 'zoom']}
         catchPayload={catchPayload}
       />
     </div>

@@ -1,14 +1,11 @@
   .btn-outline { 
    margin-top: 15px; 
-   font-size: 24px; 
-   color: #bbbbbb; 
    background: 0 0; 
    transition: all .3s ease-in-out; 
   }
   .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active { 
-    color: #000; 
-    background: #bbbbbb; 
     cursor: pointer;
+    scale: 1.1;
   }
   
   .btn-social { 
@@ -17,7 +14,6 @@
     height: 48px; 
     border-radius: 100%; 
     text-align: center; 
-    font-size: 24px; 
     line-height: 46px; 
     margin: 5px;
   }
