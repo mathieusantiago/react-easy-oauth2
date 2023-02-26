@@ -69,4 +69,11 @@ list of supported providers
 
 To activate the providers you will have to go to Supabase in your project section authentprovider and activate the desired provider by inserting the key of the provider in question 
 
+![Capture d’écran 2023-02-26 221531](https://user-images.githubusercontent.com/62888392/221437773-55841685-5703-460a-bc10-ed7039706db1.png)
 
+# Thank you
+
+I hope this was useful and if you have any question or need help, you can open an issue on GitHub
+and the discord where I am very active 
+GitHub: https://github.com/mathieusantiago/supabase-easy-oauth2/tree/master
+Discord: https://discord.gg/9EMDFGEs
