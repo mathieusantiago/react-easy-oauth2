@@ -1,11 +1,10 @@
 {
   "name": "test-react-lib-mathieusantiago",
-  "version": "1.0.1",
+  "version": "2.1.2",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "build-storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
     "build-lib": "rollup -c"
@@ -20,6 +19,7 @@
     "@storybook/addon-essentials": "^6.1.16",
     "@storybook/addon-links": "^6.1.16",
     "@storybook/react": "^6.1.16",
+    "@supabase/supabase-js": "^2.8.0",
     "babel-loader": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,6 +30,7 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "peerDependencies": {
+    "@supabase/supabase-js": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
