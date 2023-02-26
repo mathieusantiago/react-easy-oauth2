@@ -1,4 +1,4 @@
-react-easy-oauth2
+# React Easy oAuth2
 ===========
 This npm package simplifies authentication with Supabase Auth2, making it easier to connect with popular social media platforms such as Google, GitHub, Facebook, Twitter, and more.easy
 
