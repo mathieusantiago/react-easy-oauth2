@@ -1,5 +1,9 @@
 # React Easy oAuth2
 
+[![npm version](https://badge.fury.io/js/test-react-lib-mathieusantiago.svg)](https://badge.fury.io/js/test-react-lib-mathieusantiago)
+[![Downloads](https://img.shields.io/npm/dm/test-react-lib-mathieusantiago.svg)](https://www.npmjs.org/package/test-react-lib-mathieusantiago)
+
+A simple React component to manage your authentication with social networks
 
 This npm package simplifies authentication with Supabase Auth2, making it easier to connect with popular social media platforms such as Google, GitHub, Facebook, Twitter, and more.easy
 
