@@ -17,6 +17,10 @@ Create free account on Supabase https://supabase.com/
 
 Create new project you have 2 free project with a free account
 
+Retrieve your api and URL keys in your project settings on SupaBase
+
+![Capture d’écran 2023-02-26 214646](https://user-images.githubusercontent.com/62888392/221436287-449af22c-562f-47f1-b820-5501898729d8.png)
+
 Installation
 ============== 
 
@@ -27,26 +31,42 @@ Installation
 Examples
 ==========
 
-## OAuth2.0
+Here is an example of how to use the React Easy oAuth2 component 
+
+first import the react-easy-oauth2 component 
 
 ```javascript
-import {configEnv, signUpEmail, signUpGitHub} from 'supabase-easy-oauth2';
-
-// Create a single supabase client for interacting with your database
-const supabase = configEnv('https://xyzcompany.supabase.co', 'public-anon-key');
-// Define a function that signs up with email
-const email = async ()=> {
-    // Call the `signUpEmail` function with the Supabase client and email/password credentials.
-    signUpEmail(supabase, '<email@gmail.com>', '<password>').then((res)=> {
-        console.log(res);
-    });
-}
-
-// Define a function that signs up with GitHub
-const gitHub = async ()=> {
-     // Call the `signUpGitHub` function with the Supabase client and the `github, facebook, google` provider.
-    signUpGitHub(supabase, 'github').then((res)=> {
-        console.log(res);
-    })
-}
+import { FormConnect } from 'react-easy-oauth2';
 ```
+
+secondly, create a function that will retrieve any errors and data returned by supabase
+use the imported FormConnect component by passing it the correct props
+
+```javascript
+ const catchPayload = (payload)=>{ 
+    console.log('catchPayload', payload);
+  }
+```
+
+Thirdly, use the imported FormConnect component by passing it the correct props.
+
+list of supported providers
+
+```
+['apple','bitbucket', 'discord', 'facebook', 'github', 'gitlab', 'google', 'keycloak', 'linkedin', 'microsoft', 'notion', 'slack', 'spotify', 'twitch', 'twitter', 'workos', 'zoom']
+```
+
+```javascript
+    <div>
+      <FormConnect
+        url={"<your SupaBase URL>"}
+        apiKey={"<Your SupaBase public api key>"}
+        provider={<[Array of provider]>}
+        catchPayload={catchPayload}
+      />
+    </div>
+```
+
+To activate the providers you will have to go to Supabase in your project section authentprovider and activate the desired provider by inserting the key of the provider in question 
+
+
