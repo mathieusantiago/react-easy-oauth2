@@ -75,5 +75,7 @@ To activate the providers you will have to go to Supabase in your project sectio
 
 I hope this was useful and if you have any question or need help, you can open an issue on GitHub
 and the discord where I am very active 
+
 GitHub: https://github.com/mathieusantiago/supabase-easy-oauth2/tree/master
+
 Discord: https://discord.gg/9EMDFGEs
