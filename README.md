@@ -1,7 +1,13 @@
 # React Easy oAuth2
+[![npm](https://img.shields.io/npm/v/react-easy-oauth2)](https://www.npmjs.com/package/react-easy-oauth2)
+![Maintenance](https://img.shields.io/maintenance/yes/2023)
+[![npm](https://img.shields.io/npm/dm/react-easy-oauth2)](https://badge.fury.io/js/react-easy-oauth2)
+[![GitHub repo size](https://img.shields.io/github/repo-size/mathieusantiago/react-easy-oauth2)](https://github.com/mathieusantiago/react-easy-oauth2)
+![NPM](https://img.shields.io/npm/l/react-easy-oauth2)
+![npms.io (quality)](https://img.shields.io/npms-io/quality-score/react-easy-oauth2)
 
-[![npm version](https://badge.fury.io/js/react-easy-oauth2.svg)](https://badge.fury.io/js/react-easy-oauth2)
-[![Downloads](https://img.shields.io/npm/dm/react-easy-oauth2.svg)](https://www.npmjs.org/package/react-easy-oauth2)
+
+
 
 A simple React component to manage your authentication with social networks
 
