@@ -1,6 +1,6 @@
 # React Easy oAuth2
 
-[![npm version](https://badge.fury.io/js/react-easy-oauth2.svg)](https://badge.fury.io/js/react-easy-oauth2)
+[![npm version](https://badge.fury.io/js/react-easy-oauth2.svg)](https://badge.fury.io/js/react-easy-oauth2) 
 [![Downloads](https://img.shields.io/npm/dm/react-easy-oauth2.svg)](https://www.npmjs.org/package/react-easy-oauth2)
 
 A simple React component to manage your authentication with social networks
