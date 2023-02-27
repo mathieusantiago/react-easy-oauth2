@@ -10,7 +10,7 @@ import { createClient } from "@supabase/supabase-js";
    * @throws {Error} If `url` or `key` is not a non-empty string.
    * @returns {object} A Supabase client configured with the given URL and key.
  */
-export const FormConnect = ({ url, apiKey, provider, catchPayload }) => {
+export const FormConnect = ({ url, apiKey, provider, catchPayload, theme }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [supabase, setSupabase] = useState("");
@@ -77,12 +77,12 @@ export const FormConnect = ({ url, apiKey, provider, catchPayload }) => {
   };
 
   return (
-    <div className="FormConnect">
-      <div className="signup-form">
+    <div  className="FormConnect">
+      <div style={theme?.bgComponent || {}} className="signup-form">
         <div className="container">
-          <div className="header">
-            <h1>Create an Account</h1>
-            <p>Get started for free!</p>
+          <div className="header" >
+            <h1 style={theme?.h1Style || {}}>Create an Account</h1>
+            <p style={theme?.textStyle || {}} >Get started for free!</p>
           </div>
           <div>
             <div className="input">
@@ -104,9 +104,10 @@ export const FormConnect = ({ url, apiKey, provider, catchPayload }) => {
               onClick={() => signUpEmail(supabase, email, password)}
               type="button"
               value="SIGN UP"
+              style={theme?.btnStyle || {}}
             />
           </div>
-          <p>Or sign up with</p>
+          <p style={theme?.textStyle || {}}>Or sign up with</p>
           <div>
             {provider.map((prov) => {
               return (
@@ -114,8 +115,8 @@ export const FormConnect = ({ url, apiKey, provider, catchPayload }) => {
               );
             })}
           </div>
-          <p>
-            Already have an account <a href="#">sign in</a>
+          <p style={theme?.textStyle || {}}>
+            Already have an account <a style={theme?.linkStyle || {}} href="#">sign in</a>
           </p>
         </div>
       </div>

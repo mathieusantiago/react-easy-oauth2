@@ -11,7 +11,7 @@ This npm package simplifies authentication with Supabase Auth2, making it easier
 
 # SupaBase
 
-this package works with SupaBase ensuring you have an account with a URL and a public api key 
+this package works with SupaBase ensuring you have an account with a URL and a public api key
 
 Create free account on Supabase https://supabase.com/
 
@@ -22,30 +22,29 @@ Retrieve your api and URL keys in your project settings on SupaBase
 ![Capture d’écran 2023-02-26 214646](https://user-images.githubusercontent.com/62888392/221436287-449af22c-562f-47f1-b820-5501898729d8.png)
 
 Installation
-============== 
+==============
 
     $ npm install react-easy-oauth2
     OR
     $ yarn add react-easy-oauth2
 
-Examples
-==========
+# Examples
 
-Here is an example of how to use the React Easy oAuth2 component 
+Here is an example of how to use the React Easy oAuth2 component
 
-first import the react-easy-oauth2 component 
+first import the react-easy-oauth2 component
 
 ```javascript
-import { FormConnect } from 'react-easy-oauth2';
+import { FormConnect } from "react-easy-oauth2";
 ```
 
 secondly, create a function that will retrieve any errors and data returned by supabase
 use the imported FormConnect component by passing it the correct props
 
 ```javascript
- const catchPayload = (payload)=>{ 
-    console.log('catchPayload', payload);
-  }
+const catchPayload = (payload) => {
+  console.log("catchPayload", payload);
+};
 ```
 
 Thirdly, use the imported FormConnect component by passing it the correct props.
@@ -57,24 +56,85 @@ list of supported providers
 ```
 
 ```javascript
-    <div>
-      <FormConnect
-        url={"<your SupaBase URL>"}
-        apiKey={"<Your SupaBase public api key>"}
-        provider={<[Array of provider]>}
-        catchPayload={catchPayload}
-      />
-    </div>
+  <div>
+    <FormConnect
+      url={"<your SupaBase URL>"}
+      apiKey={"<Your SupaBase public api key>"}
+      provider={<[Array of provider]>}
+      catchPayload={catchPayload}
+    />
+  </div>
 ```
 
-To activate the providers you will have to go to Supabase in your project section authentprovider and activate the desired provider by inserting the key of the provider in question 
+To activate the providers you will have to go to Supabase in your project section authentprovider and activate the desired provider by inserting the key of the provider in question
 
 ![Capture d’écran 2023-02-26 221531](https://user-images.githubusercontent.com/62888392/221437773-55841685-5703-460a-bc10-ed7039706db1.png)
+
+# Create your style
+
+If you wish, it is possible to change the theme of the component by adding CSS attributes in a theme property which is an object that takes several elements
+
+Add to the component ```javascript  
+<FormConnect/> 
+```  the theme property as in the example below and apply your own color theme to the component
+
+```javascript
+  theme={{
+    textStyle: {
+      color: "#6b7280",
+    },
+    h1Style: {
+      color: "#6366f1",
+    },
+    btnStyle: {
+      "background-color": "#6366f1",
+    },
+    linkStyle: {
+      color: "#6366f1",
+    },
+  }}
+```
+# Complete exemple
+Here is an example of a complete component with all properties and parameters
+
+```javascript
+() => {
+  const catchPayload = (payload) => {
+    console.log("catchPayload", payload);
+  };
+
+  return (
+    <div>
+      <FormConnect
+        url={process.env.STORYBOOK_URL}
+        apiKey={process.env.STORYBOOK_APIKEY}
+        provider={["apple","bitbucket","discord","facebook","github","gitlab","google","keycloak","linkedin","microsoft","notion","slack","spotify","twitch","twitter","workos","zoom",
+        ]}
+        catchPayload={catchPayload}
+        theme={{
+          textStyle: {
+            color: "#6b7280",
+          },
+          h1Style: {
+            color: "#6366f1",
+          },
+          btnStyle: {
+            "background-color": "#6366f1",
+          },
+          linkStyle: {
+            color: "#6366f1",
+          },
+        }}
+      />
+    </div>
+  );
+}
+```
 
 # Thank you
 
 I hope this was useful and if you have any question or need help, you can open an issue on GitHub
-and the discord where I am very active 
+and the discord where I am very active
 
 GitHub: https://github.com/mathieusantiago/supabase-easy-oauth2/tree/master
 
