@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-export const SocialConnect = ({ supabase, provider }) => {
+export const SocialConnect = ({ supabase, provider, catchPayload }) => {
   const icons = {
     apple: 'https://app.supabase.com/img/icons/apple-icon.svg',
     bitbucket: 'https://app.supabase.com/img/icons/bitbucket-icon.svg',
