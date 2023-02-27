@@ -11,7 +11,7 @@
 
 A simple React component to manage your authentication with social networks
 
-This npm package simplifies authentication with Supabase Auth2, making it easier to connect with popular social media platforms such as Google, GitHub, Facebook, Twitter, and more.easy
+This npm package simplifies authentication with Supabase Auth2, making it easier to connect with popular social media platforms such as Google, GitHub, Facebook, Twitter, and more easy
 
 ![Capture d’écran 2023-02-26 204901](https://user-images.githubusercontent.com/62888392/221435138-ba97798c-f4db-4599-a424-dd666ec2ff7c.png)
 
