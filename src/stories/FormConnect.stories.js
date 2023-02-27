@@ -18,6 +18,9 @@ stories.add("FormConnect", () => {
         ]}
         catchPayload={catchPayload}
         theme={{
+          bgComponent :{
+            "background-color": "#ffffff",
+          },
           textStyle: {
             color: "#6b7280",
           },

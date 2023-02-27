@@ -78,6 +78,9 @@ Add to the component ```  <FormConnect/> ```  the theme property as in the examp
 
 ```javascript
   theme={{
+    bgComponent :{
+      "background-color": "blue",
+    },
     textStyle: {
       color: "#6b7280",
     },
@@ -110,6 +113,9 @@ Here is an example of a complete component with all properties and parameters
         ]}
         catchPayload={catchPayload}
         theme={{
+          bgComponent :{
+            "background-color": "blue",
+          },
           textStyle: {
             color: "#6b7280",
           },
