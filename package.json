@@ -1,7 +1,7 @@
 {
   "name": "react-easy-oauth2",
-  "version": "2.3.1",
-  "description": "",
+  "version": "2.3.2",
+  "description": "A simple React component to manage your authentication with social networks",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
@@ -9,6 +9,28 @@
     "build-storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
     "build-lib": "rollup -c"
   },
+  "keywords": [
+    "react",
+    "npm",
+    "package",
+    "oauth2",
+    "react-component",
+    "supabase",
+    "supabase-js",
+    "supabase-auth",
+    "react", 
+    "google", 
+    "hooks", 
+    "login", 
+    "sso", 
+    "easy", 
+    "gSuite",
+    "react-native", 
+    "react-native-web", 
+    "authauthentication", 
+    "oauth", 
+    "openid"
+  ],
   "author": "Mathieu Santiago",
   "license": "MIT",
   "devDependencies": {
