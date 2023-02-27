@@ -1,6 +1,6 @@
 {
   "name": "react-easy-oauth2",
-  "version": "2.2.3",
+  "version": "2.3.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
