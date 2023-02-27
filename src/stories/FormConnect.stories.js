@@ -12,26 +12,29 @@ stories.add("FormConnect", () => {
   return (
     <div>
       <FormConnect
+        logo={'https://cdn-icons-png.flaticon.com/512/3387/3387987.png'}
         url={process.env.STORYBOOK_URL}
         apiKey={process.env.STORYBOOK_APIKEY}
+        catchPayload={catchPayload}
+        useDefault="signIn"
+        field={['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']}
         provider={["apple","bitbucket","discord","facebook","github","gitlab","google","keycloak","linkedin","microsoft","notion","slack","spotify","twitch","twitter","workos","zoom",
         ]}
-        catchPayload={catchPayload}
         theme={{
           bgComponent :{
-            "background-color": "#ffffff",
+            backgroundColor: "#ffffff",
           },
           textStyle: {
             color: "#6b7280",
           },
           h1Style: {
-            color: "#6366f1",
+            color: "red",
           },
           btnStyle: {
-            "background-color": "#6366f1",
+            backgroundColor: "red",
           },
           linkStyle: {
-            color: "#6366f1",
+            color: "red",
           },
         }}
       />

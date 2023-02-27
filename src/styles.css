@@ -47,7 +47,7 @@ p {
 .input input {
   width: 100%;
   border: none;
-  padding: 8px 40px;
+  padding: 8px 20px;
   border-radius: 4px;
   background-color: #f3f4f6;
   color: #1f2937;
@@ -111,4 +111,18 @@ i.fa-google {
 a {
   color: #6366f1;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+}
+
+.m-1 {
+  margin-right: 10px;
+}
+
+.zip{
+  width: 150px;
+  margin-left: 30px;
 }
