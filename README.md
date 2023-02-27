@@ -74,9 +74,7 @@ To activate the providers you will have to go to Supabase in your project sectio
 
 If you wish, it is possible to change the theme of the component by adding CSS attributes in a theme property which is an object that takes several elements
 
-Add to the component ```javascript  
-<FormConnect/> 
-```  the theme property as in the example below and apply your own color theme to the component
+Add to the component ```  <FormConnect/> ```  the theme property as in the example below and apply your own color theme to the component
 
 ```javascript
   theme={{
