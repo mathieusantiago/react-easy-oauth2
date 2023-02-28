@@ -55,11 +55,6 @@ const catchPayload = (payload) => {
 
 Thirdly, use the imported FormConnect component by passing it the correct props.
 
-list of supported providers
-
-```
-['apple','bitbucket', 'discord', 'facebook', 'github', 'gitlab', 'google', 'keycloak', 'linkedin', 'microsoft', 'notion', 'slack', 'spotify', 'twitch', 'twitter', 'workos', 'zoom']
-```
 
 ```javascript
   <div>
@@ -70,6 +65,12 @@ list of supported providers
       catchPayload={catchPayload}
     />
   </div>
+```
+
+list of supported providers
+
+```
+['apple','bitbucket', 'discord', 'facebook', 'github', 'gitlab', 'google', 'keycloak', 'linkedin', 'microsoft', 'notion', 'slack', 'spotify', 'twitch', 'twitter', 'workos', 'zoom']
 ```
 
 To activate the providers you will have to go to Supabase in your project section authentprovider and activate the desired provider by inserting the key of the provider in question
@@ -101,6 +102,25 @@ Add to the component ```  <FormConnect/> ```  the theme property as in the examp
     },
   }}
 ```
+
+# Selecte your langage
+
+If you wish, it is possible to change the langage of the component by adding String('Fr/En') attributes in a lang property 
+
+Add to the component ```  <FormConnect/> ```  the lang property as in the example below and apply your own langage to the component
+
+```javascript
+    lang={'Fr'}
+```
+# Selecte your Field
+
+If you wish, it is possible to change the Field of the component by adding array of Field in a Field property 
+
+Add to the component ```  <FormConnect/> ```  the Field property as in the example below and apply your own Field to the component
+
+```javascript
+    field={['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']}
+```
 # Complete exemple
 Here is an example of a complete component with all properties and parameters
 
@@ -115,24 +135,27 @@ Here is an example of a complete component with all properties and parameters
       <FormConnect
         url={process.env.STORYBOOK_URL}
         apiKey={process.env.STORYBOOK_APIKEY}
-        provider={["apple","bitbucket","discord","facebook","github","gitlab","google","keycloak","linkedin","microsoft","notion","slack","spotify","twitch","twitter","workos","zoom",
-        ]}
         catchPayload={catchPayload}
+        useDefault="signUp"
+        lang={'Fr'}
+        field={['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']}
+        provider={["github","gitlab","google","keycloak","linkedin","microsoft","notion","slack","spotify","twitch","twitter","workos","zoom",
+        ]}
         theme={{
           bgComponent :{
-            "background-color": "blue",
+            backgroundColor: "#ffffff",
           },
           textStyle: {
             color: "#6b7280",
           },
           h1Style: {
-            color: "#6366f1",
+            color: "red",
           },
           btnStyle: {
-            "background-color": "#6366f1",
+            backgroundColor: "red",
           },
           linkStyle: {
-            color: "#6366f1",
+            color: "red",
           },
         }}
       />
@@ -140,6 +163,21 @@ Here is an example of a complete component with all properties and parameters
   );
 }
 ```
+# list of propertys
+
+
+| property    | type        |default|required/optional|description |
+| :---        |    :----:   | :----:|      :----:     |    :---    |
+| url         | String      || required        |The URL of your Supabase project|
+| apiKey      | String      || required        |The API key for your Supabase project|
+| catchPayload| Function    || required        |A function that receives data or error|
+| provider    | Array       |empty| optional        |The provider for user sign-up.["apple","bitbucket","discord","facebook","github","gitlab","google","keycloak","linkedin","microsoft","notion","slack","spotify","twitch","twitter","workos","zoom",]|
+| theme       | Object      |default theme| optional        |An object that contains the styling for the sign-up form|
+| field       | Array       |empty| optional        |An array of objects that describe the input fields to render in the sign-up form.['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']|
+| logo        | String      |empty| optional        |The path to the logo image to display in the sign-up form|
+| useDefault  | String      |signin| optional        |A string that determines whether to show the signup/signin form by default.|
+| lang        | String      |En| optional        |The language to use for localization of the sign-up form. Fr/En|
+
 
 # Thank you
 

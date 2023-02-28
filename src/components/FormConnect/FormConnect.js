@@ -2,14 +2,24 @@ import React, { useEffect, useState } from "react";
 import { SocialConnect } from "./SocialConnect/SocialConnect";
 import { createClient } from "@supabase/supabase-js";
 import "../../styles.css";
+import local_Fr from "../local/test.fr.json";
+import local_En from "../local/test.en.json";
 
 /**
- * Sets up the Supabase environment by creating a client from the given URL and key.
+ * Component that sets up the Supabase environment, manages user sign up, and renders a sign-up form.
  * @param {string} url - The URL of your Supabase project.
- * @param {string} key - The API key for your Supabase project.
- * @throws {Error} If `url` or `key` is not a non-empty string.
- * @returns {object} A Supabase client configured with the given URL and key.
+ * @param {string} apiKey - The API key for your Supabase project.
+ * @param {string} provider - The provider for user sign-up.["apple","bitbucket","discord","facebook","github","gitlab","google","keycloak","linkedin","microsoft","notion","slack","spotify","twitch","twitter","workos","zoom",]
+ * @param {function} catchPayload - A function that receives data or error from the `signUpEmail` method.
+ * @param {object} theme - An object that contains the styling for the sign-up form.
+ * @param {array} field - An array of objects that describe the input fields to render in the sign-up form.['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']
+ * @param {string} logo - The path to the logo image to display in the sign-up form.
+ * @param {string} useDefault - A string that determines whether to show the signup/signin form by default.
+ * @param {string} lang - The language to use for localization of the sign-up form. Fr/En
+ * @throws {Error} If `url` or `apiKey` is not a non-empty string.
+ * @returns {JSX.Element} A JSX element that contains the sign-up form.
  */
+
 export const FormConnect = ({
   url,
   apiKey,
@@ -18,8 +28,10 @@ export const FormConnect = ({
   theme,
   field,
   logo,
-  useDefault
+  useDefault,
+  lang,
 }) => {
+
   const [supabase, setSupabase] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,11 +42,14 @@ export const FormConnect = ({
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
   const [zip, setZip] = useState("");
-  const [context, setContext] = useState(useDefault === "signIn"? true:false);
+  const [context, setContext] = useState(
+    useDefault === "signUp" ? false : true
+  );
 
   if (typeof url !== "string" || url.trim() === "") {
     throw new Error("The url must be a non-empty string.");
   }
+
   if (typeof apiKey !== "string" || apiKey.trim() === "") {
     throw new Error("The apiKey must be a non-empty string.");
   }
@@ -73,20 +88,24 @@ export const FormConnect = ({
    * @throws {Error} If `email` or `password` is not a non-empty string.
    * @returns {object} An object with the response data or error from the `signUp` method.
    */
+
   const signUpEmail = async (supabase, email, password) => {
     // Verifies that `email` is a non-empty string.
     if (typeof email !== "string" || email.trim() === "") {
       throw new Error("The email address must be a non-empty string.");
     }
+
     // Verifies that `password` is a non-empty string.
     if (typeof password !== "string" || password.trim() === "") {
       throw new Error("The password must be a non-empty string.");
     }
+
     // Sign up a new user with an email address and password.
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
     });
+
     const result = {
       field: {
         email,
@@ -101,8 +120,25 @@ export const FormConnect = ({
       data,
       error,
     };
+
     catchPayload(result);
+
     return { result };
+  };
+
+  let local_lang = {};
+
+  const selectLocal = (lang) => {
+    if(!lang) {
+      return (local_lang = local_En);
+    }
+    if (lang?.startsWith("Fr")) {
+      return (local_lang = local_Fr);
+    }
+
+    if (lang?.startsWith("En")) {
+      return (local_lang = local_En);
+    }
   };
 
   return (
@@ -119,13 +155,21 @@ export const FormConnect = ({
           <div className="header">
             {!context ? (
               <>
-                <h1 style={theme?.h1Style || {}}>Create an Account</h1>
-                <p style={theme?.textStyle || {}}>Get started for free!</p>
+                <h1 style={theme?.h1Style || {}}>
+                  {selectLocal(lang).signup.header.title}
+                </h1>
+                <p style={theme?.textStyle || {}}>
+                  {selectLocal(lang).signup.header.description}
+                </p>
               </>
             ) : (
               <>
-                <h1 style={theme?.h1Style || {}}>Connect an Account</h1>
-                <p style={theme?.textStyle || {}}>Welcom!</p>
+                <h1 style={theme?.h1Style || {}}>
+                  {selectLocal(lang).signin.header.title}
+                </h1>
+                <p style={theme?.textStyle || {}}>
+                  {selectLocal(lang).signin.header.description}
+                </p>
               </>
             )}
           </div>
@@ -134,7 +178,7 @@ export const FormConnect = ({
               <div className="input m-1">
                 <input
                   type="text"
-                  placeholder="First Name"
+                  placeholder={selectLocal(lang).signup.form.first_name}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
@@ -145,7 +189,7 @@ export const FormConnect = ({
               <div className="input">
                 <input
                   type="text"
-                  placeholder="Laste Name"
+                  placeholder={selectLocal(lang).signup.form.last_name}
                   onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
@@ -158,7 +202,7 @@ export const FormConnect = ({
               <div className="input">
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder={selectLocal(lang).signin.form.email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -169,7 +213,7 @@ export const FormConnect = ({
               <div className="input">
                 <input
                   type="password"
-                  placeholder="Password"
+                  placeholder={selectLocal(lang).signin.form.password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
@@ -180,7 +224,7 @@ export const FormConnect = ({
               <div className="input">
                 <input
                   type="text"
-                  placeholder="Address"
+                  placeholder={selectLocal(lang).signup.form.address}
                   onChange={(e) => setAddress1(e.target.value)}
                 />
               </div>
@@ -191,7 +235,7 @@ export const FormConnect = ({
               <div className="input">
                 <input
                   type="text"
-                  placeholder="Address2"
+                  placeholder={selectLocal(lang).signup.form.address2}
                   onChange={(e) => setAddress2(e.target.value)}
                 />
               </div>
@@ -202,7 +246,7 @@ export const FormConnect = ({
               <div className="input">
                 <input
                   type="text"
-                  placeholder="Phone"
+                  placeholder={selectLocal(lang).signup.form.phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
@@ -214,7 +258,7 @@ export const FormConnect = ({
                 <div className="input">
                   <input
                     type="text"
-                    placeholder="City"
+                    placeholder={selectLocal(lang).signup.form.city}
                     onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
@@ -225,7 +269,7 @@ export const FormConnect = ({
                 <div className="input zip">
                   <input
                     type="text"
-                    placeholder="Zip"
+                    placeholder={selectLocal(lang).signup.form.zip}
                     onChange={(e) => setZip(e.target.value)}
                   />
                 </div>
@@ -237,14 +281,22 @@ export const FormConnect = ({
               className="signup-btn"
               onClick={() => signUpEmail(supabase, email, password)}
               type="button"
-              value={!context ? "SIGN UP" : "SIGN IN"}
+              value={
+                !context
+                  ? selectLocal(lang).signup.form.btn
+                  : selectLocal(lang).signin.form.btn
+              }
               style={theme?.btnStyle || {}}
             />
           </div>
           {!context ? (
-            <p style={theme?.textStyle || {}}>Or sign up with</p>
+            <p style={theme?.textStyle || {}}>
+              {selectLocal(lang).signup.body.content}
+            </p>
           ) : (
-            <p style={theme?.textStyle || {}}>Or sign in with</p>
+            <p style={theme?.textStyle || {}}>
+              {selectLocal(lang).signin.body.content}
+            </p>
           )}
 
           <div>
@@ -261,15 +313,17 @@ export const FormConnect = ({
           </div>
           <p style={theme?.textStyle || {}}>
             {!context ? (
-              <span>Already have an account </span>
+              <span>{selectLocal(lang).signup.footer.content} </span>
             ) : (
-              <span>Create an account </span>
+              <span>{selectLocal(lang).signin.footer.content} </span>
             )}
             <a
               style={theme?.linkStyle || {}}
               onClick={() => setContext(!context)}
             >
-              {!context ? "sign in" : "sign up"}
+              {!context
+                ? selectLocal(lang).signup.footer.link
+                : selectLocal(lang).signin.footer.link}
             </a>
           </p>
         </div>

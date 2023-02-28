@@ -1,0 +1,54 @@
+{
+  "signup": {
+    "header": {
+      "title": "Create an account",
+      "description": "get started for free!"
+    },
+    "form": {
+      "first_name": "first name",
+      "last_name": "last name ",
+      "email": "email",
+      "password": "password",
+      "phone": "phone",
+      "address": "address",
+      "address2": "address2",
+      "city": "city",
+      "zip": "zip",
+      "btn": "Sign Up"
+    },
+    "body": {
+      "content": "Or sign up with"
+    },
+    "footer": {
+      "content": "already have an account?",
+      "link": "sign in"
+    }
+  },
+
+
+  "signin": {
+    "header": {
+      "title": "Connect an Account",
+      "description": "Welcom!"
+    },
+    "form": {
+      "first_name": "first name",
+      "last_name": "last name ",
+      "email": "email",
+      "password": "password",
+      "phone": "phone",
+      "address": "address",
+      "address2": "address2",
+      "city": "city",
+      "zip": "zip",
+      "btn": "Sign In"
+    },
+    "body": {
+      "content": "Or sign in with"
+    },
+    "footer": {
+      "content": "Create an account?",
+      "link": "sign up"
+    }
+  }
+}
