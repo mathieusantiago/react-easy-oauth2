@@ -102,7 +102,15 @@ Add to the component ```  <FormConnect/> ```  the theme property as in the examp
     },
   }}
 ```
+# Selecte your logo
 
+If you wish, it is possible to change the logo of the component
+
+Add to the component ```  <FormConnect/> ```  the logo property as in the example below and apply your own logo to the component
+
+```javascript
+    logo={'https://cdn-icons-png.flaticon.com/512/3387/3387987.png'}
+```
 # Selecte your langage
 
 If you wish, it is possible to change the langage of the component by adding String('Fr/En') attributes in a lang property 
@@ -141,6 +149,7 @@ Here is an example of a complete component with all properties and parameters
         field={['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']}
         provider={["github","gitlab","google","keycloak","linkedin","microsoft","notion","slack","spotify","twitch","twitter","workos","zoom",
         ]}
+        logo={'https://cdn-icons-png.flaticon.com/512/3387/3387987.png'}
         theme={{
           bgComponent :{
             backgroundColor: "#ffffff",

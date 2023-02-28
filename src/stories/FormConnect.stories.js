@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
 import { FormConnect } from "../components/FormConnect";
 
+
 const stories = storiesOf("supaBase-oAuth2", module);
 
 stories.add("FormConnect", () => {
@@ -12,29 +13,16 @@ stories.add("FormConnect", () => {
   return (
     <div>
       <FormConnect
+        logo={'https://cdn-icons-png.flaticon.com/512/3387/3387987.png'}
         url={process.env.STORYBOOK_URL}
         apiKey={process.env.STORYBOOK_APIKEY}
         catchPayload={catchPayload}
-        useDefault="signUp"
-        lang={"Fr"}
-        field={[
-          "fname", "lname",
-          "email", "passwd",
-          "add1", "add2",
-          "phone", "city",
-          "zip",
-        ]}
-        provider={[
-          "github", "gitlab",
-          "google", "keycloak",
-          "linkedin", "microsoft",
-          "notion", "slack",
-          "spotify", "twitch",
-          "twitter", "workos",
-          "zoom",
+        useDefault="signIn"
+        field={['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']}
+        provider={["apple","bitbucket","discord","facebook","github","gitlab","google","keycloak","linkedin","microsoft","notion","slack","spotify","twitch","twitter","workos","zoom",
         ]}
         theme={{
-          bgComponent: {
+          bgComponent :{
             backgroundColor: "#ffffff",
           },
           textStyle: {
@@ -50,6 +38,7 @@ stories.add("FormConnect", () => {
             color: "red",
           },
         }}
+        lang={'Fr'}
       />
     </div>
   );

@@ -28,7 +28,7 @@ export const FormConnect = ({
   theme,
   field,
   logo,
-  useDefault,
+  useDefault = "signIn",
   lang,
 }) => {
 
