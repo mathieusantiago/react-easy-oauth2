@@ -4,7 +4,7 @@ import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import svg from 'rollup-plugin-svg';
-
+import json from '@rollup/plugin-json';
 export default [
   {
     input: './src/index.js',
@@ -32,6 +32,7 @@ export default [
       resolve(),
       terser(),
       svg(),
+      json()
     ]
   }
 ];
