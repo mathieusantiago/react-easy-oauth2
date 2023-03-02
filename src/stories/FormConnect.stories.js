@@ -38,7 +38,7 @@ stories.add("FormConnect", () => {
             color: "red",
           },
         }}
-        lang={'Fr'}
+        lang={'En'}
       />
     </div>
   );

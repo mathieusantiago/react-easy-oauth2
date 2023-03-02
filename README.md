@@ -113,7 +113,15 @@ Add to the component ```  <FormConnect/> ```  the logo property as in the exampl
 ```
 # Selecte your langage
 
-If you wish, it is possible to change the langage of the component by adding String('Fr/En') attributes in a lang property 
+If you wish, it is possible to change the langage of the component by adding String('Fr') attributes in a lang property 
+
+| code | langage |
+|:----:| :----:  |
+| Fr   | French  |
+| En   | English |
+| Es   | Spanish |
+| It   | Italy   |
+| Pt   | Poland  |
 
 Add to the component ```  <FormConnect/> ```  the lang property as in the example below and apply your own langage to the component
 
@@ -185,7 +193,7 @@ Here is an example of a complete component with all properties and parameters
 | field       | Array       |empty| optional        |An array of objects that describe the input fields to render in the sign-up form.['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']|
 | logo        | String      |empty| optional        |The path to the logo image to display in the sign-up form|
 | useDefault  | String      |signin| optional        |A string that determines whether to show the signup/signin form by default.|
-| lang        | String      |En| optional        |The language to use for localization of the sign-up form. Fr/En|
+| lang        | String      |En| optional        |The language to use for localization of the sign-up form. Fr/En/Es/It/Pt|
 
 
 # Thank you

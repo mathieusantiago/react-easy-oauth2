@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { SocialConnect } from "./SocialConnect/SocialConnect";
 import { createClient } from "@supabase/supabase-js";
 import "../../styles.css";
-import local_Fr from "../local/test.fr.json";
-import local_En from "../local/test.en.json";
+import local_Fr from "../local/lang.fr.json";
+import local_En from "../local/lang.en.json";
+import local_Es from "../local/lang.es.json";
+import local_It from "../local/lang.it.json";
+import local_Pt from "../local/lang.pt.json";
 
 /**
  * Component that sets up the Supabase environment, manages user sign up, and renders a sign-up form.
@@ -138,6 +141,18 @@ export const FormConnect = ({
 
     if (lang?.startsWith("En")) {
       return (local_lang = local_En);
+    }
+
+    if (lang?.startsWith("Es")) {
+      return (local_lang = local_Es);
+    }
+
+    if (lang?.startsWith("It")) {
+      return (local_lang = local_It);
+    }
+
+    if (lang?.startsWith("Pt")) {
+      return (local_lang = local_It);
     }
   };
 

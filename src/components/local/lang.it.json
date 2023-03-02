@@ -1,0 +1,52 @@
+{
+  "signup": {
+    "header": {
+      "title": "Crea un account",
+      "description": "Inizia gratuitamente"
+    },
+    "form": {
+      "first_name": "Nome",
+      "last_name": "Cognome",
+      "email": "Email",
+      "password": "Password",
+      "phone": "Telefono",
+      "address": "Indirizzo",
+      "address2": "Indirizzo 2",
+      "city": "Città",
+      "zip": "Codice postale",
+      "btn": "Registrati"
+    },
+    "body": {
+      "content": "Oppure registrati con"
+    },
+    "footer": {
+      "content": "Hai già un account?",
+      "link": "Accedi"
+    }
+  },
+  "signin": {
+    "header": {
+      "title": "Accedi al tuo account",
+      "description": "Benvenuto!"
+    },
+    "form": {
+      "first_name": "Nome",
+      "last_name": "Cognome",
+      "email": "Email",
+      "password": "Password",
+      "phone": "Telefono",
+      "address": "Indirizzo",
+      "address2": "Indirizzo 2",
+      "city": "Città",
+      "zip": "Codice postale",
+      "btn": "Accedi"
+    },
+    "body": {
+      "content": "Oppure accedi con"
+    },
+    "footer": {
+      "content": "Non hai un account?",
+      "link": "Registrati"
+    }
+  }
+}
