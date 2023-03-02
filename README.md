@@ -112,18 +112,18 @@ Add to the component ```  <FormConnect/> ```  the logo property as in the exampl
 
 If you wish, it is possible to change the langage of the component by adding String('Fr') attributes in a lang property 
 
-| code | langage |
-|:----:| :----:  |
-| Fr   | French  |
-| Ar   | Arabic  |
-| De   | German  |
-| En   | English |
-| Es   | Spanish |
-| It   | Italy   |
-| Ja   | Japanese|
-| Pt   | Poland  |
-| Ru   | Russian |
-| Zh   | Chinese |
+| code | language |
+|:----:| :----:   |
+| Fr   | French   |
+| Ar   | Arabic   |
+| De   | German   |
+| En   | English  |
+| Es   | Spanish  |
+| It   | Italy    |
+| Ja   | Japanese |
+| Pt   | Poland   |
+| Ru   | Russian  |
+| Zh   | Chinese  |
 
 Add to the component ```  <FormConnect/> ```  the lang property as in the example below and apply your own langage to the component
 
