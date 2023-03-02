@@ -4,9 +4,6 @@
 [![npm](https://img.shields.io/npm/dm/react-easy-oauth2)](https://badge.fury.io/js/react-easy-oauth2)
 [![GitHub repo size](https://img.shields.io/github/repo-size/mathieusantiago/react-easy-oauth2)](https://github.com/mathieusantiago/react-easy-oauth2)
 ![NPM](https://img.shields.io/npm/l/react-easy-oauth2)
-![npms.io (quality)](https://img.shields.io/npms-io/quality-score/react-easy-oauth2)
-
-
 
 
 A simple React component to manage your authentication with social networks
@@ -118,10 +115,15 @@ If you wish, it is possible to change the langage of the component by adding Str
 | code | langage |
 |:----:| :----:  |
 | Fr   | French  |
+| Ar   | Arabic  |
+| De   | German  |
 | En   | English |
 | Es   | Spanish |
 | It   | Italy   |
+| Ja   | Japanese|
 | Pt   | Poland  |
+| Ru   | Russian |
+| Zh   | Chinese |
 
 Add to the component ```  <FormConnect/> ```  the lang property as in the example below and apply your own langage to the component
 
@@ -193,7 +195,7 @@ Here is an example of a complete component with all properties and parameters
 | field       | Array       |empty| optional        |An array of objects that describe the input fields to render in the sign-up form.['fname','lname', 'email', 'passwd', 'add1', 'add2', 'phone', 'city', 'zip']|
 | logo        | String      |empty| optional        |The path to the logo image to display in the sign-up form|
 | useDefault  | String      |signin| optional        |A string that determines whether to show the signup/signin form by default.|
-| lang        | String      |En| optional        |The language to use for localization of the sign-up form. Fr/En/Es/It/Pt|
+| lang        | String      |En| optional        |The language to use for localization of the sign-up form. Fr/Ar/De/En/Es/It/Ja/Pt/Ru/Zh|
 
 
 # Thank you

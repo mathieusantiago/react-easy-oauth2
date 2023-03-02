@@ -1,0 +1,52 @@
+{
+  "signup": {
+    "header": {
+      "title": "创建帐户",
+      "description": "免费开始"
+    },
+    "form": {
+      "first_name": "名字",
+      "last_name": "姓氏",
+      "email": "电子邮件",
+      "password": "密码",
+      "phone": "电话",
+      "address": "地址",
+      "address2": "地址2",
+      "city": "城市",
+      "zip": "邮编",
+      "btn": "注册"
+    },
+    "body": {
+      "content": "或使用以下方式注册"
+    },
+    "footer": {
+      "content": "已有帐户？",
+      "link": "登录"
+    }
+  },
+  "signin": {
+    "header": {
+      "title": "登录帐户",
+      "description": "欢迎！"
+    },
+    "form": {
+      "first_name": "名字",
+      "last_name": "姓氏",
+      "email": "电子邮件",
+      "password": "密码",
+      "phone": "电话",
+      "address": "地址",
+      "address2": "地址2",
+      "city": "城市",
+      "zip": "邮编",
+      "btn": "登录"
+    },
+    "body": {
+      "content": "或使用以下方式登录"
+    },
+    "footer": {
+      "content": "还没有帐户？",
+      "link": "注册"
+    }
+  }
+}

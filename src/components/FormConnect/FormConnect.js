@@ -7,6 +7,11 @@ import local_En from "../local/lang.en.json";
 import local_Es from "../local/lang.es.json";
 import local_It from "../local/lang.it.json";
 import local_Pt from "../local/lang.pt.json";
+import local_De from "../local/lang.de.json";
+import local_Zh from "../local/lang.zh.json";
+import local_Ja from "../local/lang.ja.json";
+import local_Ru from "../local/lang.ru.json";
+import local_Ar from "../local/lang.ar.json";
 
 /**
  * Component that sets up the Supabase environment, manages user sign up, and renders a sign-up form.
@@ -152,7 +157,27 @@ export const FormConnect = ({
     }
 
     if (lang?.startsWith("Pt")) {
-      return (local_lang = local_It);
+      return (local_lang = local_Pt);
+    }
+
+    if (lang?.startsWith("De")) {
+      return (local_lang = local_De);
+    }
+    
+    if (lang?.startsWith("Ja")) {
+      return (local_lang = local_Ja);
+    }
+
+    if (lang?.startsWith("Ru")) {
+      return (local_lang = local_Ru);
+    }
+
+    if (lang?.startsWith("Ar")) {
+      return (local_lang = local_Ar);
+    }
+
+    if (lang?.startsWith("Zh")) {
+      return (local_lang = local_Zh);
     }
   };
 

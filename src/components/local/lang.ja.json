@@ -1,0 +1,52 @@
+{
+  "signup": {
+    "header": {
+      "title": "アカウントを作成する",
+      "description": "無料で始めよう"
+    },
+    "form": {
+      "first_name": "名",
+      "last_name": "姓",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "phone": "電話番号",
+      "address": "住所",
+      "address2": "住所2",
+      "city": "市区町村",
+      "zip": "郵便番号",
+      "btn": "登録"
+    },
+    "body": {
+      "content": "または以下の方法で登録"
+    },
+    "footer": {
+      "content": "すでにアカウントをお持ちですか？",
+      "link": "ログイン"
+    }
+  },
+  "signin": {
+    "header": {
+      "title": "アカウントにログインする",
+      "description": "ようこそ！"
+    },
+    "form": {
+      "first_name": "名",
+      "last_name": "姓",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "phone": "電話番号",
+      "address": "住所",
+      "address2": "住所2",
+      "city": "市区町村",
+      "zip": "郵便番号",
+      "btn": "ログイン"
+    },
+    "body": {
+      "content": "または以下の方法でログイン"
+    },
+    "footer": {
+      "content": "アカウントをお持ちでない場合は？",
+      "link": "登録"
+    }
+  }
+}

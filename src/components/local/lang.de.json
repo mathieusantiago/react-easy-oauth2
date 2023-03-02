@@ -1,0 +1,52 @@
+{
+  "signup": {
+    "header": {
+      "title": "Konto erstellen",
+      "description": "Kostenlos starten"
+    },
+    "form": {
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "address2": "Adresse 2",
+      "city": "Stadt",
+      "zip": "Postleitzahl",
+      "btn": "Registrieren"
+    },
+    "body": {
+      "content": "Oder registrieren Sie sich mit"
+    },
+    "footer": {
+      "content": "Sie haben bereits ein Konto?",
+      "link": "Anmelden"
+    }
+  },
+  "signin": {
+    "header": {
+      "title": "Melden Sie sich in Ihrem Konto an",
+      "description": "Willkommen!"
+    },
+    "form": {
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "address2": "Adresse 2",
+      "city": "Stadt",
+      "zip": "Postleitzahl",
+      "btn": "Anmelden"
+    },
+    "body": {
+      "content": "Oder melden Sie sich mit"
+    },
+    "footer": {
+      "content": "Sie haben noch kein Konto?",
+      "link": "Registrieren"
+    }
+  }
+}
