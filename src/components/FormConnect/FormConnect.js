@@ -39,7 +39,6 @@ export const FormConnect = ({
   useDefault = "signIn",
   lang,
 }) => {
-
   const [supabase, setSupabase] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -53,7 +52,28 @@ export const FormConnect = ({
   const [context, setContext] = useState(
     useDefault === "signUp" ? false : true
   );
-
+  const arrayLang = [
+    "Fr",
+    "fr",
+    "En",
+    "en",
+    "Es",
+    "es",
+    "It",
+    "it",
+    "Pt",
+    "pt",
+    "De",
+    "de",
+    "Ja",
+    "ja",
+    "Ru",
+    "ru",
+    "Ar",
+    "ar",
+    "Zh",
+    "zh",
+  ];
   if (typeof url !== "string" || url.trim() === "") {
     throw new Error("The url must be a non-empty string.");
   }
@@ -135,9 +155,10 @@ export const FormConnect = ({
   };
 
   let local_lang = {};
+  let default_lang = "En";
 
   const selectLocal = (lang) => {
-    if(!lang) {
+    if (!lang || !arrayLang.some((startsWith) => lang.startsWith(startsWith))) {
       return (local_lang = local_En);
     }
     if (lang?.startsWith("Fr")) {
@@ -163,7 +184,7 @@ export const FormConnect = ({
     if (lang?.startsWith("De")) {
       return (local_lang = local_De);
     }
-    
+
     if (lang?.startsWith("Ja")) {
       return (local_lang = local_Ja);
     }
