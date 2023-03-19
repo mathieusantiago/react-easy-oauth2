@@ -29,7 +29,7 @@
   "signin": {
     "header": {
       "title": "Connect an Account",
-      "description": "Welcom!"
+      "description": "Welcome!"
     },
     "form": {
       "first_name": "first name",
