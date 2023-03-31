@@ -8,7 +8,7 @@
 
 A simple React component to manage your authentication with social networks
 
-Demo :  [demo-react-easy-oauth2](https://demo-react-easy-oauth2.santiagodevweb.com/ "")
+Demo :  [react-easy-oauth2](https://demo-react-easy-oauth2.santiagodevweb.com/ "")
 
 This npm package simplifies authentication with Supabase Auth2, making it easier to connect with popular social media platforms such as Google, GitHub, Facebook, Twitter, and more easy
 
