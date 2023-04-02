@@ -205,6 +205,6 @@ Here is an example of a complete component with all properties and parameters
 I hope this was useful and if you have any question or need help, you can open an issue on GitHub
 and the discord where I am very active
 
-GitHub: https://github.com/mathieusantiago/supabase-easy-oauth2/tree/master
+GitHub: https://github.com/mathieusantiago/react-easy-oauth2
 
 Discord: https://discord.gg/9EMDFGEs
